@@ -11,7 +11,7 @@ const ProductScreens = () => {
           <Image source={{ uri: item.image }} style={styles.image} />
         </View>
       )}
-      numColumns={3}
+      numColumns={2}
     />
   );
 };
