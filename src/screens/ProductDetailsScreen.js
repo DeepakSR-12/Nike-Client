@@ -44,6 +44,7 @@ const ProductDetailsScreen = () => {
           <Text style={styles.description}>{product.description}</Text>
         </View>
       </ScrollView>
+
       {/* Add to cart button */}
       <Pressable style={styles.button} onPress={addToCart}>
         <Text style={styles.buttonText}>Add to cart</Text>
