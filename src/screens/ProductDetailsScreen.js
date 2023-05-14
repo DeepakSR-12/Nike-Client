@@ -9,14 +9,16 @@ import {
   Pressable,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { cartSlice } from "../store/cartSlice";
 
 const ProductDetailsScreen = () => {
   const product = useSelector((state) => state.products.selectedProduct);
   const { width } = useWindowDimensions();
+  const dispatch = useDispatch();
 
   const addToCart = () => {
-    console.log("pressed");
+    dispatch(cartSlice.actions.addCartItem({ product }));
   };
 
   return (
